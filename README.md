@@ -8,3 +8,8 @@ This component is the consumer of the provider and creating the list of all the 
 
 ## SearchBar component 
 This component do the search in pokemon as well as it communicate with the Context provider too
+
+## How to Run?
+- npm install 
+- npm start [it should run to your loclahost 3000]
+(if you are using port other than 3000. Go to src/context.js at line 10 updated the port or URL)
