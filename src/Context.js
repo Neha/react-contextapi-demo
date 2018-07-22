@@ -1,9 +1,12 @@
 import React from 'react';
 import axios from 'axios';
 export const AppContext = React.createContext();
+
+
 export class AppProvider extends React.Component {
        state = {
-           searchedPokemons : []
+           searchedPokemons : [],
+           theme : 'light'
        }
 
        componentDidMount = () =>{
@@ -12,9 +15,17 @@ export class AppProvider extends React.Component {
             this.setState({
                 PokemonNames : response.data,
                 searchedPokemons : response.data
+                
             })
          })
        }
+
+       themeButton = (e) => {
+        console.log('click')
+           this.setState( ({theme} ) => ({
+               theme : theme === 'light' ? 'dark' : 'light'
+           }) )
+        }
 
        nameSearch = (char) =>{
           var arr = [];
@@ -26,7 +37,7 @@ export class AppProvider extends React.Component {
             else{
                
             }
-
+            
             this.setState({
                 searchedPokemons : arr
             })
@@ -38,7 +49,8 @@ export class AppProvider extends React.Component {
             return(
                 <AppContext.Provider value={{
                     ...this.state,
-                    nameSearch : this.nameSearch
+                    nameSearch : this.nameSearch,
+                    themeButton : this.themeButton
                 }}>
                 {this.props.children}
                 </AppContext.Provider>
