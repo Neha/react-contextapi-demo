@@ -1,0 +1,19 @@
+[
+    "Ivysaur",
+    "Venusaur",
+    "Charmander",
+    "Mega",
+    "Charmeleon",
+    "Charizard",
+    "Squirtle",
+    "Wartortle",
+    "Blastoise",
+    "Pidgeot",
+    "Rattata",
+    "Raticate",
+    "Spearow",
+    "Fearow",
+    "Ekans",
+    "Arbok",
+    "Clefairy"
+]
