@@ -30,10 +30,10 @@ export class AppProvider extends React.Component {
        nameSearch = (char) =>{
           var arr = [];
 
-        for(let i = 0; i < this.state.PokemonNames.length; i++){
-            if( (this.state.PokemonNames[i].toLowerCase()).indexOf(char) > -1) {
-                arr.push(this.state.PokemonNames[i]);
-            }
+            for(let i = 0; i < this.state.PokemonNames.length; i++){
+                if( (this.state.PokemonNames[i].toLowerCase()).indexOf(char) > -1) {
+                    arr.push(this.state.PokemonNames[i]);
+                }
             else{
                
             }
